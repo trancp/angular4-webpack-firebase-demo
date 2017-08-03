@@ -18,3 +18,11 @@
     </li>
 </ul>
 
+<input placeholder="What is it that you do?"
+       type="text"
+       (keyup.enter)="Send($event.target.value)"
+       [(ngModel)]="msgVal" />
+<div>
+    <p *ngFor="let item of items | async">{{item.message}}</p>
+</div>
+
